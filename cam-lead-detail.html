@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CAM 线索详情</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+@font-face{font-family:'Space Grotesk';font-style:normal;font-weight:400 700;font-display:swap;src:url(data:font/woff2;base64,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) format('woff2')}
+
+:root{
+  --grad:linear-gradient(135deg,#7C5CFC 0%,#9F7AFF 100%);
+  --primary:#7C5CFC;--primary-soft:#F1EDFE;--primary-ghost:#F7F4FE;
+  --ink:#1C1633;--ink-2:#5A5478;--ink-3:#9B95B5;--ink-4:#B8B2CC;
+  --green:#10B981;--green-soft:#DFF7EF;
+  --orange:#F59E0B;--orange-soft:#FEF1DC;
+  --pink:#EC4899;--pink-soft:#FDE7F1;
+  --blue:#3B82F6;--blue-soft:#E3EEFE;
+  --red:#EF4444;--red-soft:#FEE2E2;
+  --gray:#6B7280;--gray-soft:#F1F2F5;
+  --bg:#F7F6FC;--surface:#FFFFFF;--line:#EFECF8;--line-2:#F3F0FB;
+  --r-md:10px;--r-lg:14px;--r-pill:999px;
+  --sh:0 2px 6px rgba(124,92,252,.05), 0 8px 24px rgba(124,92,252,.06);
+  --sh-hover:0 4px 10px rgba(124,92,252,.08), 0 14px 34px rgba(124,92,252,.10);
+  --sh-grad:0 6px 16px rgba(124,92,252,.35);
+  --ease:cubic-bezier(.2,0,0,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%}
+body{font-family:'Noto Sans SC','Space Grotesk',system-ui,sans-serif;background:var(--bg);color:var(--ink);font-size:14px;line-height:1.5;-webkit-font-smoothing:antialiased;overflow:hidden}
+.num{font-family:'Space Grotesk',sans-serif;font-feature-settings:"tnum"}
+.app{display:flex;height:100vh}
+
+/* 侧边栏 */
+.sidebar{width:220px;flex-shrink:0;background:var(--surface);border-right:1px solid var(--line);display:flex;flex-direction:column;padding:18px 14px 14px}
+.brand{display:flex;align-items:center;gap:11px;padding:2px 8px 20px}
+.logo{width:38px;height:38px;border-radius:50%;background:var(--grad);display:flex;align-items:center;justify-content:center;box-shadow:var(--sh-grad)}
+.logo svg{width:19px;height:19px;color:#fff}
+.brand-name b{font-size:16px;font-weight:800;display:block;line-height:1.15}
+.brand-name small{font-size:10.5px;color:var(--ink-3);font-weight:500;margin-top:1px;display:block}
+.nav{display:flex;flex-direction:column;gap:3px}
+.nav a.lv1{display:flex;align-items:center;gap:11px;padding:10px 13px;border-radius:var(--r-md);color:var(--ink-2);text-decoration:none;font-weight:500;font-size:13.5px;cursor:pointer;transition:all .18s var(--ease)}
+.nav a.lv1 .ic{width:18px;height:18px;flex-shrink:0;display:flex;align-items:center;justify-content:center}
+.nav a.lv1 .ic svg{width:18px;height:18px}
+.nav a.lv1 .badge{margin-left:auto;font-size:10.5px;font-weight:700;background:var(--orange-soft);color:var(--orange);padding:1px 7px;border-radius:var(--r-pill)}
+.nav a.lv1:hover{background:var(--primary-soft);color:var(--ink)}
+.nav a.lv1.active{background:var(--grad);color:#fff;font-weight:600;box-shadow:var(--sh-grad)}
+.nav a.lv1.active .ic svg{color:#fff}
+.nav a.lv1.active .badge{background:rgba(255,255,255,.25);color:#fff}
+.side-foot{margin-top:auto;display:flex;flex-direction:column;gap:10px}
+.goal{background:var(--primary-soft);border-radius:var(--r-lg);padding:14px 15px}
+.goal .row{display:flex;align-items:center;justify-content:space-between;margin-bottom:9px}
+.goal .row b{font-size:12.5px;font-weight:600}
+.goal .row .pct{font-size:12.5px;font-weight:700;color:var(--primary)}
+.goal .track{height:6px;background:#E4DDFB;border-radius:var(--r-pill);overflow:hidden}
+.goal .fill{height:100%;width:74%;background:var(--grad);border-radius:var(--r-pill)}
+.goal .sub{font-size:11px;color:var(--ink-3);margin-top:8px;display:block}
+.user{display:flex;align-items:center;gap:10px;padding:9px 10px;border:1px solid var(--line);border-radius:var(--r-lg);cursor:pointer;transition:box-shadow .18s var(--ease)}
+.user:hover{box-shadow:var(--sh)}
+.u-av{width:34px;height:34px;border-radius:50%;flex-shrink:0;background:linear-gradient(135deg,#F97362,#EC4899);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:13px}
+.user .info{line-height:1.25;min-width:0}
+.user .info b{font-size:12.5px;font-weight:600;display:block}
+.user .info small{font-size:10.5px;color:var(--ink-3);display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.user svg{width:14px;height:14px;color:var(--ink-3);margin-left:auto;flex-shrink:0}
+
+/* 主区域 */
+.main{flex:1;display:flex;flex-direction:column;min-width:0}
+.topbar{height:58px;flex-shrink:0;display:flex;align-items:center;gap:14px;padding:0 26px;background:var(--surface);border-bottom:1px solid var(--line)}
+.crumbs{display:flex;align-items:center;gap:7px;font-size:12px;color:var(--ink-3)}
+.crumbs b{color:var(--ink);font-weight:600;font-size:13.5px}
+.crumbs svg{width:13px;height:13px;color:var(--ink-4)}
+.top-right{margin-left:auto;display:flex;align-items:center;gap:10px}
+.date-pill{display:flex;align-items:center;gap:6px;font-size:12px;font-weight:500;color:var(--ink-2);border:1px solid var(--line);border-radius:var(--r-pill);padding:6px 13px;background:var(--surface)}
+.date-pill svg{width:14px;height:14px;color:var(--primary)}
+.bell{width:36px;height:36px;border-radius:50%;border:1px solid var(--line);background:var(--surface);display:flex;align-items:center;justify-content:center;cursor:pointer;position:relative;transition:all .18s var(--ease)}
+.bell:hover{box-shadow:var(--sh)}
+.bell svg{width:17px;height:17px;color:var(--ink-2)}
+.bell .dot{position:absolute;top:7px;right:8px;width:7px;height:7px;background:var(--pink);border-radius:50%;border:1.5px solid #fff}
+.t-av{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#F97362,#EC4899);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:13px;cursor:pointer}
+
+.scroll{flex:1;overflow-y:auto;padding:22px 26px;scrollbar-width:thin;scrollbar-color:#D8D3EC transparent}
+.scroll::-webkit-scrollbar{width:7px}
+.scroll::-webkit-scrollbar-thumb{background:#D8D3EC;border-radius:7px}
+
+/* 详情头 */
+.dh{display:flex;align-items:center;gap:14px;margin-bottom:16px}
+.back{width:38px;height:38px;border-radius:11px;border:1px solid var(--line);background:var(--surface);display:flex;align-items:center;justify-content:center;color:var(--ink-2);cursor:pointer;transition:all .18s var(--ease);flex-shrink:0}
+.back:hover{color:var(--primary);border-color:var(--primary);background:var(--primary-soft)}
+.back svg{width:18px;height:18px}
+.dh-av{width:48px;height:48px;border-radius:50%;background:var(--grad);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:18px;flex-shrink:0;box-shadow:var(--sh-grad)}
+.dh-ttl{display:flex;flex-direction:column;gap:6px}
+.dh-ttl h1{font-size:20px;font-weight:800;letter-spacing:-.01em;display:flex;align-items:center;gap:10px}
+.dh-meta{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.dh-meta .ph{font-family:'Space Grotesk';font-size:12px;color:var(--ink-3)}
+.dh-meta .sep{color:var(--ink-4)}
+.tag{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:600;padding:3px 10px;border-radius:var(--r-pill)}
+.tag .d{width:6px;height:6px;border-radius:50%}
+.tag.onway{background:var(--primary-soft);color:var(--primary)}.tag.onway .d{background:var(--primary)}
+.tag.ok{background:var(--green-soft);color:var(--green)}.tag.ok .d{background:var(--green)}
+.tag.src{background:var(--bg);color:var(--ink-2)}
+.dh-ops{margin-left:auto;display:flex;gap:10px}
+.btn{display:inline-flex;align-items:center;gap:7px;border:none;cursor:pointer;font-family:inherit;font-weight:600;font-size:13px;border-radius:var(--r-pill);padding:9px 16px;transition:all .18s var(--ease)}
+.btn svg{width:15px;height:15px}
+.btn-grad{background:var(--grad);color:#fff;box-shadow:var(--sh-grad)}
+.btn-grad:hover{transform:translateY(-1px);filter:brightness(1.05)}
+.btn-outline{background:var(--surface);color:var(--ink);border:1px solid var(--line)}
+.btn-outline:hover{box-shadow:var(--sh);border-color:var(--primary)}
+.btn-danger{background:var(--surface);color:var(--red);border:1px solid var(--red-soft)}
+.btn-danger:hover{background:var(--red-soft)}
+.btn-icon{width:38px;height:38px;border-radius:11px;padding:0;justify-content:center}
+
+/* 卡片 */
+.card{background:var(--surface);border-radius:var(--r-lg);box-shadow:var(--sh);padding:18px 20px;margin-bottom:16px}
+.card-hd{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+.card-hd h3{font-size:14.5px;font-weight:700;display:flex;align-items:center;gap:9px}
+.card-hd h3 .pip{width:3px;height:15px;border-radius:2px;background:var(--grad)}
+.card-hd .sub{font-size:11.5px;color:var(--ink-3);margin-top:2px}
+.card-hd .hint{font-size:11px;color:var(--ink-3);display:flex;align-items:center;gap:4px}
+.card-hd .hint svg{width:13px;height:13px;color:var(--ink-4);flex-shrink:0}
+
+/* 意向预判卡（重点，渐变描边） */
+.pre-card{background:linear-gradient(135deg,#F7F4FE 0%,#FBF0FE 100%);border:1px solid var(--primary-soft);border-radius:var(--r-lg);padding:18px 20px;margin-bottom:16px;position:relative;overflow:hidden}
+.pre-card::before{content:"";position:absolute;right:-30px;top:-30px;width:140px;height:140px;border-radius:50%;background:radial-gradient(circle,rgba(124,92,252,.12) 0%,transparent 70%)}
+.pre-hd{display:flex;align-items:center;gap:9px;margin-bottom:14px;position:relative}
+.pre-hd .pic{width:30px;height:30px;border-radius:9px;background:var(--grad);display:flex;align-items:center;justify-content:center;color:#fff;flex-shrink:0}
+.pre-hd .pic svg{width:16px;height:16px}
+.pre-hd b{font-size:14px;font-weight:700}
+.pre-hd .desc{font-size:11.5px;color:var(--ink-2);margin-top:1px}
+.pre-hd .tip{margin-left:auto;font-size:11px;color:var(--primary);background:var(--surface);padding:4px 11px;border-radius:var(--r-pill);font-weight:600;display:flex;align-items:center;gap:4px}
+.pre-hd .tip svg{width:12px;height:12px}
+.pre-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;position:relative}
+.pre-box{background:var(--surface);border-radius:var(--r-md);padding:13px;border:1px solid var(--line)}
+.pre-box .lbl{font-size:10.5px;font-weight:600;color:var(--ink-3);letter-spacing:.04em;text-transform:uppercase;margin-bottom:8px;display:flex;align-items:center;gap:5px}
+.pre-box .lbl i{width:7px;height:7px;border-radius:50%}
+.pre-box.onway .lbl i{background:var(--primary)}
+.pre-box.pause .lbl i{background:var(--orange)}
+.pre-box.lost .lbl i{background:var(--gray)}
+.pre-box.deal .lbl i{background:var(--green)}
+.pre-box .prod{font-size:13px;font-weight:600;margin-bottom:3px}
+.pre-box .st{font-size:11px;font-weight:600;margin-bottom:6px}
+.pre-box.onway .st{color:var(--primary)}
+.pre-box.pause .st{color:var(--orange)}
+.pre-box.lost .st{color:var(--gray)}
+.pre-box.deal .st{color:var(--green)}
+.pre-box .row{font-size:11px;color:var(--ink-3);line-height:1.5}
+.pre-box .row b{color:var(--ink-2);font-weight:500}
+.pre-box .empty{font-size:11px;color:var(--ink-4);font-style:italic}
+
+/* 主体两栏 */
+.body-cols{display:grid;grid-template-columns:1.7fr 1fr;gap:16px;align-items:start}
+.body-cols > *{margin-bottom:0}
+
+/* 登记信息 */
+.info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.info-item{display:flex;flex-direction:column;gap:4px}
+.info-item .k{font-size:11px;color:var(--ink-3);font-weight:500}
+.info-item .v{font-size:13px;color:var(--ink);font-weight:500}
+.info-item .v.muted{color:var(--ink-2);font-weight:400}
+.info-item .v.mono{font-family:'Space Grotesk'}
+.info-item .v .lk{color:var(--primary);cursor:pointer}
+
+/* 意向单列表 */
+.d-table{width:100%;border-collapse:collapse}
+.d-table th{text-align:left;font-size:11px;font-weight:600;color:var(--ink-3);padding:8px 10px;border-bottom:1px solid var(--line);letter-spacing:.04em;text-transform:uppercase}
+.d-table td{padding:11px 10px;border-bottom:1px solid var(--line-2);font-size:12.5px;vertical-align:middle}
+.d-table tr:last-child td{border-bottom:none}
+.d-table tbody tr:hover{background:var(--primary-ghost)}
+.stg{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:600;padding:2px 9px;border-radius:var(--r-pill)}
+.stg .d{width:6px;height:6px;border-radius:50%}
+.stg.busi{background:var(--primary-soft);color:var(--primary)}.stg.busi .d{background:var(--primary)}
+.stg.pause{background:var(--orange-soft);color:var(--orange)}.stg.pause .d{background:var(--orange)}
+.stg.intent{background:var(--blue-soft);color:var(--blue)}.stg.intent .d{background:var(--blue)}
+.op-link{font-size:12px;color:var(--primary);cursor:pointer;font-weight:500;text-decoration:none}
+.op-link:hover{text-decoration:underline}
+
+/* 跟进时间线 */
+.fu-form{background:var(--bg);border:1px solid var(--line);border-radius:var(--r-md);padding:14px;margin-bottom:16px}
+.fu-form .fh{display:flex;align-items:center;gap:8px;margin-bottom:10px;font-size:12.5px;font-weight:600}
+.fu-form .fh .pic{width:24px;height:24px;border-radius:7px;background:var(--grad);color:#fff;display:flex;align-items:center;justify-content:center}
+.fu-form .fh .pic svg{width:13px;height:13px}
+.fu-types{display:flex;gap:6px;margin-bottom:10px}
+.fu-type{display:flex;align-items:center;gap:5px;padding:5px 11px;border-radius:var(--r-pill);border:1px solid var(--line);font-size:11.5px;color:var(--ink-2);cursor:pointer;transition:all .18s;background:var(--surface)}
+.fu-type:hover{border-color:var(--primary);color:var(--primary)}
+.fu-type.on{background:var(--primary);color:#fff;border-color:var(--primary)}
+.fu-type svg{width:13px;height:13px}
+.fu-form textarea{width:100%;border:1px solid var(--line);border-radius:7px;padding:9px 11px;font-size:12.5px;color:var(--ink);font-family:inherit;outline:none;resize:vertical;min-height:60px;background:var(--surface);transition:all .18s}
+.fu-form textarea:focus{border-color:var(--primary);box-shadow:0 0 0 3px var(--primary-soft)}
+.fu-foot{display:flex;align-items:center;gap:12px;margin-top:10px}
+.fu-foot .nx{display:flex;align-items:center;gap:6px;font-size:11.5px;color:var(--ink-3)}
+.fu-foot .nx svg{width:13px;height:13px;flex-shrink:0;color:var(--ink-4)}
+.fu-foot .nx input{border:1px solid var(--line);border-radius:6px;padding:4px 8px;font-size:11.5px;font-family:inherit;outline:none;color:var(--ink)}
+.fu-foot .nx input:focus{border-color:var(--primary)}
+.fu-foot .submit{margin-left:auto}
+
+/* 时间线 */
+.tl{position:relative;padding-left:22px}
+.tl::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.tl-group{margin-bottom:16px}
+.tl-date{font-size:11px;font-weight:600;color:var(--ink-3);margin-bottom:10px;position:relative}
+.tl-date::before{content:"";position:absolute;left:-19px;top:50%;transform:translateY(-50%);width:8px;height:8px;border-radius:50%;background:var(--surface);border:2px solid var(--ink-4)}
+.tl-item{position:relative;padding:10px 12px;background:var(--bg);border-radius:var(--r-md);margin-bottom:8px;border:1px solid var(--line-2)}
+.tl-item::before{content:"";position:absolute;left:-19px;top:14px;width:8px;height:8px;border-radius:50%;background:var(--primary);border:2px solid var(--surface);box-shadow:0 0 0 2px var(--primary-soft)}
+.tl-item.phone::before{background:var(--blue)}
+.tl-item.wechat::before{background:var(--green)}
+.tl-item.visit::before{background:var(--orange)}
+.tl-top{display:flex;align-items:center;gap:8px;margin-bottom:5px}
+.tl-top .typ{display:inline-flex;align-items:center;gap:4px;font-size:11px;font-weight:600;padding:2px 8px;border-radius:var(--r-pill)}
+.tl-top .typ svg{width:12px;height:12px}
+.tl-top .typ.phone{background:var(--blue-soft);color:var(--blue)}
+.tl-top .typ.wechat{background:var(--green-soft);color:var(--green)}
+.tl-top .typ.visit{background:var(--orange-soft);color:var(--orange)}
+.tl-top .who{font-size:11.5px;color:var(--ink-2)}
+.tl-top .tm{margin-left:auto;font-size:11px;color:var(--ink-3);font-family:'Space Grotesk'}
+.tl-content{font-size:12.5px;color:var(--ink);line-height:1.55;margin-bottom:5px}
+.tl-next{font-size:11px;color:var(--orange);font-weight:600;display:flex;align-items:center;gap:4px}
+.tl-next svg{width:12px;height:12px}
+
+/* 右侧卡 */
+.side-card{background:var(--surface);border-radius:var(--r-lg);box-shadow:var(--sh);padding:18px 20px;margin-bottom:16px}
+.cu-top{display:flex;align-items:center;gap:11px;margin-bottom:14px}
+.cu-av{width:42px;height:42px;border-radius:11px;background:linear-gradient(135deg,#3B82F6,#60A5FA);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:15px;flex-shrink:0}
+.cu-top b{font-size:14px;font-weight:700}
+.cu-top .cu-id{font-size:11px;color:var(--ink-3);font-family:'Space Grotesk'}
+.cu-top .lk{margin-left:auto;font-size:11.5px;color:var(--primary);cursor:pointer;font-weight:600;display:flex;align-items:center;gap:3px}
+.cu-top .lk svg{width:13px;height:13px}
+.cu-row{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--line-2);font-size:12.5px}
+.cu-row:last-child{border-bottom:none}
+.cu-row .k{color:var(--ink-3)}
+.cu-row .v{color:var(--ink);font-weight:500;text-align:right}
+.cu-row .v.mono{font-family:'Space Grotesk'}
+.cu-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:12px}
+.cu-tag{font-size:10.5px;font-weight:600;padding:2px 8px;border-radius:5px;background:var(--primary-soft);color:var(--primary)}
+.cu-tag.green{background:var(--green-soft);color:var(--green)}
+.cu-tag.orange{background:var(--orange-soft);color:var(--orange)}
+.cu-cta{display:flex;align-items:center;justify-content:center;gap:7px;margin-top:14px;padding:9px;border:1px dashed var(--ink-4);border-radius:var(--r-md);color:var(--primary);font-size:12.5px;font-weight:600;cursor:pointer;transition:all .18s}
+.cu-cta:hover{background:var(--primary-soft);border-color:var(--primary)}
+.cu-cta svg{width:14px;height:14px}
+
+/* 归属卡 */
+.as-row{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid var(--line-2)}
+.as-row:last-child{border-bottom:none}
+.as-row .k{font-size:12px;color:var(--ink-3);width:88px;flex-shrink:0}
+.as-row .v{font-size:12.5px;color:var(--ink);font-weight:500;flex:1}
+.as-row .v.mono{font-family:'Space Grotesk'}
+.sla{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:600;padding:2px 9px;border-radius:var(--r-pill);background:var(--green-soft);color:var(--green)}
+.sla svg{width:12px;height:12px}
+
+/* 状态栏 */
+.statusbar{flex-shrink:0;display:flex;align-items:center;justify-content:space-between;padding:11px 26px;background:var(--surface);border-top:1px solid var(--line);font-size:11.5px;color:var(--ink-3)}
+.statusbar .l{display:flex;align-items:center;gap:8px}
+.statusbar .ok-dot{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 0 3px var(--green-soft)}
+.statusbar .r{display:flex;align-items:center;gap:16px}
+.statusbar a{color:var(--ink-3);text-decoration:none;cursor:pointer}
+.statusbar a:hover{color:var(--primary)}
+.statusbar .ver{font-family:'Space Grotesk'}
+
+@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.rise{animation:rise .45s var(--ease) both}
+.d1{animation-delay:.04s}.d2{animation-delay:.1s}.d3{animation-delay:.16s}.d4{animation-delay:.22s}.d5{animation-delay:.28s}
+@media (max-width:1200px){.body-cols{grid-template-columns:1fr}.pre-grid{grid-template-columns:repeat(2,1fr)}.info-grid{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+<!-- 导航返回按钮 -->
+<a href="nav.html" style="position:fixed;top:16px;left:16px;z-index:9999;display:inline-flex;align-items:center;gap:6px;padding:8px 14px;background:#fff;color:#7C5CFC;border:1px solid #ede5ff;border-radius:20px;font-size:13px;font-weight:500;text-decoration:none;box-shadow:0 2px 12px rgba(124,92,252,0.12);transition:all .2s;"
+   onmouseover="this.style.background='#F7F4FE';this.style.boxShadow='0 4px 18px rgba(124,92,252,0.2)'"
+   onmouseout="this.style.background='#fff';this.style.boxShadow='0 2px 12px rgba(124,92,252,0.12)'">
+  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+  原型导航
+</a>
+
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l9-4 9 4-9 4-9-4z"></path><path d="M3 12l9 4 9-4"></path><path d="M3 17l9 4 9-4"></path></svg></div>
+      <div class="brand-name"><b>CAM</b><small>客户资产经营管理</small></div>
+    </div>
+    <nav class="nav">
+      <a class="lv1" href="cam-dashboard.html"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9" rx="1.5"></rect><rect x="14" y="3" width="7" height="5" rx="1.5"></rect><rect x="14" y="12" width="7" height="9" rx="1.5"></rect><rect x="3" y="16" width="7" height="5" rx="1.5"></rect></svg></span>工作台</a>
+      <a class="lv1 active" href="cam-lead-center.html"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="m21 21-4.3-4.3"></path></svg></span>线索中心<span class="badge">12</span></a>
+      <a class="lv1" href="cam-customer-360.html"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"></path></svg></span>客户360</a>
+      <a class="lv1" href="cam-sales-funnel.html"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h18l-3 6H6L3 4z"></path><path d="M5 10l-2 10h18l-2-10"></path><path d="M10 14h4"></path></svg></span>销售漏斗</a>
+      <a class="lv1" href="cam-report-center.html"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M9 17V9"></path><path d="M15 17v-5"></path><path d="M3 9h18"></path></svg></span>报表中心</a>
+      <a class="lv1" href="cam-channel-distribution.html"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg></span>渠道分销</a>
+      <a class="lv1" href="cam-ka-management.html"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4l3 12h14l3-12-6 7-4-7-4 7-6-7z"/><line x1="5" y1="20" x2="19" y2="20"/></svg></span>KA管理</a>
+      <a class="lv1" href="cam-credit-term.html"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/><line x1="6" y1="15" x2="10" y2="15"/></svg></span>账期信用</a>
+      <a class="lv1" href="cam-digital-asset.html"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/></svg></span>数字资产</a>
+      <a class="lv1" href="cam-data-access.html"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1A1.7 1.7 0 0 0 9 19.4a1.7 1.7 0 0 0-1.9.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1A1.7 1.7 0 0 0 4.6 9a1.7 1.7 0 0 0-.3-1.9l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.9.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1A1.7 1.7 0 0 0 15 4.6a1.7 1.7 0 0 0 1.9-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.9V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"></path></svg></span>系统设置</a>
+    </nav>
+    <div class="side-foot">
+      <div class="goal">
+        <div class="row"><b>本月目标</b><span class="pct num">74%</span></div>
+        <div class="track"><div class="fill"></div></div>
+        <span class="sub">已完成 ¥1.82M / ¥2.46M</span>
+      </div>
+      <div class="user">
+        <div class="u-av">林</div>
+        <div class="info"><b>林小溪</b><small>中心云站 · 销售</small></div>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m7 15 5 5 5-5"></path><path d="m7 9 5-5 5 5"></path></svg>
+      </div>
+    </div>
+  </aside>
+
+  <div class="main">
+    <header class="topbar">
+      <div class="crumbs">
+        <span>线索中心</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg>
+        <b>线索详情</b>
+      </div>
+      <div class="top-right">
+        <div class="date-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M16 2v4M8 2v4M3 10h18"></path></svg>10月20日 周二</div>
+        <button class="bell"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.7 21a2 2 0 0 1-3.4 0"></path></svg><span class="dot"></span></button>
+        <div class="t-av">林</div>
+      </div>
+    </header>
+
+    <div class="scroll">
+      <!-- 详情头 -->
+      <div class="dh rise" data-sp-bindable="database" data-sp-database-id="ID10XyKll51rAzq3kC8yJy">
+        <button class="back" onclick="location.href='cam-lead-center.html'"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"></path></svg></button>
+        <div class="dh-av">王</div>
+        <div class="dh-ttl">
+          <h1>王志远 <span class="tag onway"><span class="d"></span>已有在途意向</span></h1>
+          <div class="dh-meta">
+            <span class="ph">138****1234</span>
+            <span class="sep">·</span>
+            <span style="font-size:12px;color:var(--ink-2)">云启科技有限公司</span>
+            <span class="sep">·</span>
+            <span class="tag ok"><span class="d"></span>有效</span>
+            <span class="tag src">官网-试用申请</span>
+            <span class="ph">L-2043</span>
+          </div>
+        </div>
+        <div class="dh-ops">
+          <button class="btn btn-outline btn-danger"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M4.9 4.9l14.2 14.2"></path></svg>标记无效</button>
+          <button class="btn btn-outline"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"></path></svg>转商机</button>
+          <button class="btn btn-grad"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"></path></svg>新增跟进</button>
+          <button class="btn btn-outline btn-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1"></circle><circle cx="12" cy="12" r="1"></circle><circle cx="12" cy="19" r="1"></circle></svg></button>
+        </div>
+      </div>
+
+      <!-- 意向预判卡 -->
+      <div class="pre-card rise d1">
+        <div class="pre-hd">
+          <div class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="m21 21-4.3-4.3"></path></svg></div>
+          <div>
+            <b>意向预判</b>
+            <div class="desc">该客户名下意向与成交背景 · 接单先看此卡再决定跟进策略</div>
+          </div>
+          <span class="tip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4M12 8h.01"></path></svg>暂缓/流失单均计入预判口径</span>
+        </div>
+        <div class="pre-grid">
+          <div class="pre-box onway">
+            <div class="lbl"><i></i>在途意向单</div>
+            <div class="prod">CAM 标准版</div>
+            <div class="st">商机态 · 报价谈判</div>
+            <div class="row"><b>负责人</b> 林小溪</div>
+            <div class="row"><b>最近跟进</b> 10-20 14:00</div>
+          </div>
+          <div class="pre-box pause">
+            <div class="lbl"><i></i>暂缓意向单</div>
+            <div class="prod">CAM 企业版</div>
+            <div class="st">暂缓中</div>
+            <div class="row"><b>冻结原因</b> 预算未定</div>
+            <div class="row"><b>最近跟进</b> 5 天前</div>
+          </div>
+          <div class="pre-box lost">
+            <div class="lbl"><i></i>流失意向单</div>
+            <div class="empty">无</div>
+          </div>
+          <div class="pre-box deal">
+            <div class="lbl"><i></i>历史成交</div>
+            <div class="prod">CAM 基础版</div>
+            <div class="st">已成交</div>
+            <div class="row"><b>成交时间</b> 2025-08</div>
+            <div class="row"><b>金额</b> <span class="num">¥86,000</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 主体两栏 -->
+      <div class="body-cols">
+        <!-- 左主栏 -->
+        <div>
+          <!-- 登记信息 -->
+          <div class="card rise d2">
+            <div class="card-hd">
+              <div><h3><span class="pip"></span>登记信息</h3><div class="sub">lead 为事件流水 · 修改手机/邮箱走标识变更流程级联更新</div></div>
+            </div>
+            <div class="info-grid" data-sp-bindable="database" data-sp-database-id="ID10XyKll51rAzq3kC8yJy">
+              <div class="info-item"><span class="k">线索 ID</span><span class="v mono">L-2043</span></div>
+              <div class="info-item"><span class="k">姓名</span><span class="v">王志远</span></div>
+              <div class="info-item"><span class="k">手机号（脱敏）</span><span class="v mono">138****1234</span></div>
+              <div class="info-item"><span class="k">邮箱（脱敏）</span><span class="v mono">zhi***@yunqi.com</span></div>
+              <div class="info-item"><span class="k">公司</span><span class="v">云启科技有限公司</span></div>
+              <div class="info-item"><span class="k">来源</span><span class="v">官网-试用申请</span></div>
+              <div class="info-item"><span class="k">来源明细</span><span class="v muted">4月活动</span></div>
+              <div class="info-item"><span class="k">关联客户</span><span class="v"><span class="lk">云启科技 CU-1024</span></span></div>
+              <div class="info-item"><span class="k">创建时间</span><span class="v mono">2026-10-20 09:15</span></div>
+            </div>
+          </div>
+
+          <!-- 关联意向单 -->
+          <div class="card rise d3">
+            <div class="card-hd">
+              <div><h3><span class="pip"></span>关联意向单</h3><div class="sub">客户×产品意向单元 · 由销售手动创建或转商机一步创建</div></div>
+              <button class="btn btn-outline" style="padding:6px 12px;font-size:12px" onclick="_nav('cam-demand-create.html')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"></path></svg>创建意向单</button>
+            </div>
+            <table class="d-table">
+              <thead><tr><th>产品</th><th>状态</th><th>阶段/原因</th><th>负责人</th><th>最近跟进</th><th>操作</th></tr></thead>
+              <tbody>
+                <tr><td><b>CAM 标准版</b></td><td><span class="stg busi"><span class="d"></span>商机</span></td><td>报价谈判</td><td>林小溪</td><td style="font-size:11.5px;color:var(--ink-3)">10-20 14:00</td><td><a class="op-link">查看</a></td></tr>
+                <tr><td><b>CAM 企业版</b></td><td><span class="stg pause"><span class="d"></span>暂缓</span></td><td>预算未定</td><td>周子安</td><td style="font-size:11.5px;color:var(--ink-3)">5 天前</td><td><a class="op-link">激活</a> · <a class="op-link">查看</a></td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- 跟进时间线 -->
+          <div class="card rise d4">
+            <div class="card-hd">
+              <div><h3><span class="pip"></span>跟进时间线</h3><div class="sub">按时间倒序 · 新增后列表与详情 ≤3 秒同步</div></div>
+              <span class="hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4M12 8h.01"></path></svg>跟进推进的是意向单状态，非登记状态</span>
+            </div>
+
+            <!-- 新增跟进表单 -->
+            <div class="fu-form">
+              <div class="fh"><div class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"></path></svg></div>新增跟进记录</div>
+              <div class="fu-types">
+                <div class="fu-type on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.8.7a2 2 0 0 1 1.7 2z"></path></svg>电话</div>
+                <div class="fu-type"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4L3 21l1.1-4.5A8.4 8.4 0 1 1 21 11.5z"></path></svg>微信</div>
+                <div class="fu-type"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><path d="M9 22V12h6v10"></path></svg>拜访</div>
+                <div class="fu-type"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-10 5L2 7"></path></svg>邮件</div>
+                <div class="fu-type">其他</div>
+              </div>
+              <textarea placeholder="这次沟通说了什么、了解到什么（必填，上限 2000 字）…"></textarea>
+              <div class="fu-foot">
+                <div class="nx"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>下次跟进 <input type="datetime-local" value="2026-10-22T10:00"></div>
+                <button class="btn btn-grad submit" style="padding:7px 16px;font-size:12px">提交跟进</button>
+              </div>
+            </div>
+
+            <!-- 时间线 -->
+            <div class="tl">
+              <div class="tl-group">
+                <div class="tl-date">今天 · 10-20</div>
+                <div class="tl-item phone">
+                  <div class="tl-top">
+                    <span class="typ phone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.8.7a2 2 0 0 1 1.7 2z"></path></svg>电话</span>
+                    <span class="who">林小溪</span>
+                    <span class="tm">14:00</span>
+                  </div>
+                  <div class="tl-content">沟通产品演示需求，客户对标准版感兴趣，提到下周有内部评审，希望尽快安排演示。已发送演示议程。</div>
+                  <div class="tl-next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>下次跟进 10-22 10:00</div>
+                </div>
+              </div>
+              <div class="tl-group">
+                <div class="tl-date">昨天 · 10-19</div>
+                <div class="tl-item wechat">
+                  <div class="tl-top">
+                    <span class="typ wechat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4L3 21l1.1-4.5A8.4 8.4 0 1 1 21 11.5z"></path></svg>微信</span>
+                    <span class="who">林小溪</span>
+                    <span class="tm">16:30</span>
+                  </div>
+                  <div class="tl-content">发送产品资料包（标准版功能清单 + 报价单），客户确认已收到，约定明天下午电话详聊。</div>
+                </div>
+                <div class="tl-item phone">
+                  <div class="tl-top">
+                    <span class="typ phone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.8.7a2 2 0 0 1 1.7 2z"></path></svg>电话</span>
+                    <span class="who">林小溪</span>
+                    <span class="tm">10:00</span>
+                  </div>
+                  <div class="tl-content">首次接触，了解客户背景：云启科技，SaaS 企业服务，约 80 人，当前用竞品。有换型意向。沟通约 15 分钟。</div>
+                  <div class="tl-next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>下次跟进 10-20 14:00（已按时完成）</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 右侧栏 -->
+        <div>
+          <!-- 客户主档摘要 -->
+          <div class="side-card rise d2">
+            <div class="card-hd" style="margin-bottom:12px"><div><h3><span class="pip"></span>客户主档</h3></div></div>
+            <div class="cu-top">
+              <div class="cu-av">云</div>
+              <div><b>云启科技有限公司</b><div class="cu-id">CU-1024</div></div>
+              <a class="lk">查看 360<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg></a>
+            </div>
+            <div class="cu-row"><span class="k">统一标识</span><span class="v mono">138****1234</span></div>
+            <div class="cu-row"><span class="k">行业</span><span class="v">SaaS / 企业服务</span></div>
+            <div class="cu-row"><span class="k">规模</span><span class="v">50-200 人</span></div>
+            <div class="cu-row"><span class="k">首次接触</span><span class="v mono">2025-07</span></div>
+            <div class="cu-row"><span class="k">累计成交</span><span class="v"><b class="num" style="color:var(--green)">¥86,000</b></span></div>
+            <div class="cu-tags">
+              <span class="cu-tag green">老客户</span>
+              <span class="cu-tag orange">高价值</span>
+              <span class="cu-tag">在途商机</span>
+            </div>
+            <div class="cu-cta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"></path></svg>补充客户信息（写入主档，非 lead 快照）</div>
+          </div>
+
+          <!-- 归属与分配 -->
+          <div class="side-card rise d3">
+            <div class="card-hd" style="margin-bottom:12px"><div><h3><span class="pip"></span>归属与分配</h3></div></div>
+            <div class="as-row"><span class="k">当前负责人</span><span class="v" style="display:flex;align-items:center;gap:7px"><span class="u-av" style="width:22px;height:22px;font-size:10px;background:var(--grad)">林</span>林小溪</span></div>
+            <div class="as-row"><span class="k">分配方式</span><span class="v">自动分配（轮询）</span></div>
+            <div class="as-row"><span class="k">分配时间</span><span class="v mono">10-20 09:15</span></div>
+            <div class="as-row"><span class="k">首响 SLA</span><span class="v"><span class="sla"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"></path></svg>30 分钟内已首响</span></span></div>
+            <div class="as-row"><span class="k">分配日志</span><span class="v" style="color:var(--primary);cursor:pointer">查看 1 条记录</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="statusbar">
+      <div class="l"><span class="ok-dot"></span><span>系统运行正常</span><span>·</span><span>跟进记录 3 秒内同步</span></div>
+      <div class="r"><a>帮助中心</a><a>意见反馈</a><a>API 文档</a><a>更新日志</a><span class="ver">v2.4.1</span></div>
+    </footer>
+  </div>
+</div>
+<script>
+// 跟进类型切换
+document.querySelectorAll('.fu-type').forEach(t=>{t.addEventListener('click',()=>{document.querySelectorAll('.fu-type').forEach(x=>x.classList.remove('on'));t.classList.add('on')})});
+// 展开新增跟进（点顶部按钮滚动）
+document.querySelectorAll('.btn-grad').forEach(b=>{if(b.textContent.includes('新增跟进'))b.addEventListener('click',()=>{document.querySelector('.fu-form textarea').focus();document.querySelector('.fu-form').scrollIntoView({behavior:'smooth',block:'center'})})});
+</script>
+<script>
+// ── 数据接入：线索详情（按 record_id 读取）──
+(function(){
+  try{
+    var db = window.__SMART_PAGE__ && window.__SMART_PAGE__.database;
+    if(!db){ return; }
+    var DATABASE_ID = 'ID10XyKll51rAzq3kC8yJy';
+    var rid = new URLSearchParams(location.search).get('rid');
+    if(!rid){ return; }
+
+    function load(startCursor, acc, guard){
+      acc=acc||[]; guard=guard||0;
+      if(guard>100){ findAndRender(acc); return; }
+      db.query({databaseId:DATABASE_ID, pageSize:200, startCursor:startCursor}).then(function(r){
+        acc=acc.concat(r.results||[]);
+        var next=r.nextCursor;
+        if(r.hasMore && next && next!==startCursor && (r.results||[]).length){ load(next, acc, guard+1); }
+        else { findAndRender(acc); }
+      }).catch(function(e){ console.error('[db] load fail', e); });
+    }
+
+    function findAndRender(rows){
+      var rec = rows.filter(function(r){ return r.record_id===rid; })[0];
+      if(!rec){ return; }
+      var name=rec['联系人']||'—';
+      var company=rec['客户名称']||'';
+      var phone=rec['手机号']||'';
+      var src=rec['来源渠道']||'';
+      var valid=rec['有效性']||'有效';
+      var ipp=rec['意向预判']||'新意向';
+      var ld=rec['线索编号']||'';
+      var created=rec['创建时间']||'';
+
+      var av=document.querySelector('.dh-av'); if(av) av.textContent=name.charAt(0);
+      var h1=document.querySelector('.dh-ttl h1');
+      if(h1){ h1.innerHTML=escapeHtml(name)+' <span class="tag onway"><span class="d"></span>'+escapeHtml(ipp)+'</span>'; }
+      var meta=document.querySelector('.dh-meta');
+      if(meta){ meta.innerHTML='<span class="ph">'+escapeHtml(phone)+'</span><span class="sep">·</span><span style="font-size:12px;color:var(--ink-2)">'+escapeHtml(company)+'</span><span class="sep">·</span><span class="tag '+(valid==='有效'?'ok':'bad')+'"><span class="d"></span>'+escapeHtml(valid)+'</span><span class="tag src">'+escapeHtml(src)+'</span><span class="ph">'+escapeHtml(ld)+'</span>'; }
+      setItem('线索 ID', ld);
+      setItem('姓名', name);
+      setItem('手机号（脱敏）', phone);
+      setItem('公司', company);
+      setItem('来源', src);
+      setItem('创建时间', created);
+    }
+    function escapeHtml(s){ return String(s).replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+    function setItem(label, val){
+      var items=document.querySelectorAll('.info-item');
+      for(var i=0;i<items.length;i++){
+        var k=items[i].querySelector('.k');
+        if(k && k.textContent.trim()===label){
+          var v=items[i].querySelector('.v'); if(v) v.textContent=val;
+        }
+      }
+    }
+    load();
+  }catch(e){ console.error('[db] lead-detail init fail', e); }
+})();
+</script>
+
+<script>
+// ── 导航修复 v3：移除所有拦截，让查看器 inject.js 原生处理 ──
+// _nav() 创建临时 <a> 并触发 click，inject.js 会拦截并处理导航
+window._nav = function(url){
+  var a = document.createElement('a');
+  a.href = url;
+  a.style.display = 'none';
+  document.body.appendChild(a);
+  a.click();
+  setTimeout(function(){ a.remove(); }, 200);
+};
+</script>
+</body>
+</html>

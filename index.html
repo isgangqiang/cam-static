@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CAM</title>
+<meta http-equiv="refresh" content="0; url=cam-dashboard.html" />
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Helvetica Neue",Arial,sans-serif;
+    background:linear-gradient(135deg,#f5f7fa 0%,#e4e8f0 100%);
+    min-height:100vh;display:flex;align-items:center;justify-content:center;
+  }
+  .box{text-align:center}
+  .box .logo{
+    display:inline-flex;align-items:center;gap:12px;
+    padding:14px 28px;border-radius:16px;
+    background:#fff;box-shadow:0 4px 20px rgba(0,0,0,.06);margin-bottom:18px;
+  }
+  .box .logo svg{width:28px;height:28px;color:#7c5cfc}
+  .box .logo b{font-size:20px}
+  .box .logo small{color:#6b7280;font-size:12px}
+  .box h1{font-size:22px;color:#1f2937;margin-bottom:6px}
+  .box p{color:#6b7280;font-size:13px;margin-bottom:24px}
+  .box a{
+    display:inline-block;padding:10px 24px;border-radius:20px;
+    background:#7c5cfc;color:#fff;text-decoration:none;font-size:14px;
+    box-shadow:0 2px 12px rgba(124,92,252,.25);
+  }
+  .box a.ghost{background:#fff;color:#7c5cfc;margin-left:10px;box-shadow:0 1px 6px rgba(0,0,0,.06)}
+</style>
+<script>
+  // 如果 3 秒内还没跳转（极少见），兜底跳转
+  setTimeout(function(){ location.href='cam-dashboard.html'; }, 3000);
+</script>
+</head>
+<body>
+<div class="box">
+  <div class="logo">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l9-4 9 4-9 4-9-4z" /><path d="M3 12l9 4 9-4" /><path d="M3 17l9 4 9-4" /></svg>
+    <div><b>CAM</b> <small>客户资产经营管理</small></div>
+  </div>
+  <h1>正在进入工作台…</h1>
+  <p>如未自动跳转，请点击下方按钮</p>
+  <a href="cam-dashboard.html">进入工作台</a>
+  <a class="ghost" href="nav.html">原型导航</a>
+</div>
+</body>
+</html>
